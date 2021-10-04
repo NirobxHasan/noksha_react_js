@@ -8,15 +8,11 @@ import './Header.css'
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faCoffee, faHeadset, faPowerOff, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
-
+import Course from '../Course/Course';
+import useCourses from '../hooks/useCourses';
 const Header = () => {
 
-    const [courses, setCourses] = useState([]);
-    useEffect(()=>{
-        fetch('./data.JSON')
-            .then(res=>res.json())
-            .then(data=> setCourses(data))
-    },[])
+    const [courses] = useCourses();
     return (
         <div>
            
@@ -65,7 +61,7 @@ const Header = () => {
                     <p className='text-center'>You don't have to struggle alone, you've got our assistance and help.</p>
                 </div>
 
-                <div className='m-4' c>
+                <div className='m-4' >
                 <Container > 
                     <Row xs={1} md={2} className="g-4 d-flex justify-content-center">
                     <Col className="card card1 m-2 p-3">
@@ -94,6 +90,25 @@ const Header = () => {
             </div>
 
             {/* courses  */}
+            <Container className='my-5' >
+                <h1 className='fw-bold'>Find The Right <br />
+                    Online Course For You</h1>
+                    <p>You don't have to struggle alone, you've got our assistance and help.</p>
+                   
+
+                   
+
+                <Row xs={1} md={2} className="m-4">
+                    {
+                        courses.slice(0,4).map(course => <Course course={course} />)
+                    }
+                 
+                </Row>
+            
+            </Container>
+
+
+           
                 
         </div>
     );

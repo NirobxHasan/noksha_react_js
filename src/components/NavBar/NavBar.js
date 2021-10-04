@@ -1,23 +1,24 @@
 import React from 'react';
 import { Container, Navbar, NavDropdown,Nav,Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 const NavBar = () => {
+    const activestyle={
+        fontWeight: "bold",
+        color: "#F50057"
+    }
     return (
-        <Navbar fixed="top" collapseOnSelect expand="lg" className="navbar">
+        <Navbar fixed="top" collapseOnSelect expand="lg" className="nav-bar">
             <Container>
                 <Navbar.Brand onClick={()=>console.log('ok')} className="brand-name" href="#home">NOKSHA</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                    <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown>
+                    
+                    <Nav.Link ><NavLink className='nav-link' activeClassName="selected" activeStyle={activestyle} to='/home'>Home</NavLink></Nav.Link>
+                   <Nav.Link ><NavLink className='nav-link' activeStyle={activestyle} to='/courses'>Courses</NavLink></Nav.Link>
+                    
+                    <Nav.Link ><NavLink className='nav-link' activeStyle={activestyle} to='/about'>About</NavLink></Nav.Link>
                     </Nav>
 
                     <Nav>

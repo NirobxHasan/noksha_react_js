@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <div className='footer mt-5'>
             <Row xs={1} sm={1} md={2} lg={4}> 
                 <Col className="d-flex justify-content-center align-items-center">
                     <Container >
