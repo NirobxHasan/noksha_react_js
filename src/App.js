@@ -15,6 +15,7 @@ import About from './components/About/About';
 import Courses from './components/Courses/Courses';
 import CouseDetails from './components/CourseDetails/CouseDetails';
 import NotFound from './components/NotFound/NotFound';
+import Teachers from './components/Teachers/Teachers';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route exact path='/courses'>
               <Courses/>
+            </Route>
+            <Route exact path='/teachers'>
+              <Teachers/>
             </Route>
             <Route exact path='/course/:courseID'>
               <CouseDetails/>

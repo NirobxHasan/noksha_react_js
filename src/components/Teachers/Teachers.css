@@ -1,0 +1,8 @@
+.teacher-container{
+    margin: 100px 20px;
+}
+.teacher-section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
