@@ -13,6 +13,8 @@ const NavBar = () => {
                 <Navbar.Brand onClick={()=>console.log('ok')} className="brand-name" href="#home">NOKSHA</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
+
+                    {/* nav link which are highlighted  */}
                     <Nav className="me-auto">
                     
                     <Nav.Link ><NavLink className='nav-link' activeClassName="selected" activeStyle={activestyle} to='/home'>Home</NavLink></Nav.Link>
