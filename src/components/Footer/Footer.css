@@ -3,3 +3,14 @@
     color: rgb(107, 107, 107);
     padding: 20px;
 }
+a{
+    text-decoration: none;
+    display: block;
+    color: rgb(107, 107, 107);
+}
+.title{
+    color: #F50057;
+}
+.input-field{
+    font-size: 12px;
+}

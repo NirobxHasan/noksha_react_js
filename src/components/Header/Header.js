@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import NavBar from '../NavBar/NavBar';
 import img1 from '../../images/N1.jpg';
@@ -10,9 +10,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faCoffee, faHeadset, faPowerOff, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
+
+    const [courses, setCourses] = useState([]);
+    useEffect(()=>{
+        fetch('./data.JSON')
+            .then(res=>res.json())
+            .then(data=> setCourses(data))
+    },[])
     return (
         <div>
-            <NavBar/>
+           
           {/* Image slider */}
             <Carousel >
                 <Carousel.Item  className="carosel-item">
@@ -85,6 +92,8 @@ const Header = () => {
                 </Container>
                 </div>
             </div>
+
+            {/* courses  */}
                 
         </div>
     );
