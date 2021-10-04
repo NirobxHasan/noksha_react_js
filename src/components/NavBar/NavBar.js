@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <Navbar fixed="top" collapseOnSelect expand="lg" className="navbar">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand onClick={()=>console.log('ok')} className="brand-name" href="#home">NOKSHA</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -22,7 +22,7 @@ const NavBar = () => {
 
                     <Nav>
                     <Nav.Link>
-                        <Button className="btn-primary">Signup</Button>
+                        <Button className="btn-color">Signup</Button>
                     </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

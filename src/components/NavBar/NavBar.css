@@ -2,7 +2,16 @@
     background-color: rgb(226, 226, 226);
     color: rgb(107, 107, 107);
 }
+.brand-name{
+    color:#F50057 !important ;
+    font-weight: 700;
+    font-size: 1.6em;
+}
 .btn-color{
     background-color: #F50057;
+    border: 0;
+}
+.btn-color:hover{
+    background-color: #ff0055;
     border: 0;
 }
