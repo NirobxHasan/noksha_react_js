@@ -28,6 +28,9 @@
 .card4{
     background-color: #F9A826;
 }
+.teachers-text{
+    text-align: end;
+}
 @media only screen and (max-width:992px){
     .carosel-item{
         height: 100%;
@@ -38,5 +41,8 @@
         height: 280px;
         border-radius: 10px;
         
+    }
+    .teachers-text{
+        text-align: center;
     }
 }

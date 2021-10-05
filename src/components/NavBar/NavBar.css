@@ -16,3 +16,15 @@
     background-color: #ff0055;
     border: 0;
 }
+.custome-btn{
+    background-color: #F50057;
+    border: 0;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.custome-btn:hover{
+    background-color: #ff0055;
+
+}

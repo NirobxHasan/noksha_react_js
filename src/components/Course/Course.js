@@ -27,7 +27,8 @@ const Course = (props) => {
                         <p className='fw-bold'>Price: {price} BDT</p>
                 </div>
                 
-                    <Button onClick={handleShow} className="btn-color w-100 m-0">Details</Button>
+                
+                    <button onClick={handleShow} className='custome-btn w-100 m-0'>Details</button>
 
                     {/* modal details  */}
                     <Modal show={show} onHide={handleClose}>
@@ -52,9 +53,7 @@ const Course = (props) => {
                         <Button variant="secondary" onClick={handleClose}>
                             Close
                         </Button>
-                        <Button className="btn-color" variant="primary" onClick={handleClose}>
-                            Buy Now
-                        </Button>
+                        <button className="custome-btn" onClick={handleClose}>Buy Now</button>
                         </Modal.Footer>
                     </Modal>
                     

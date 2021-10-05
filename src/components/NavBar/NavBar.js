@@ -27,7 +27,8 @@ const NavBar = () => {
 
                     <Nav>
                     <Nav.Link>
-                        <Button className="btn-color">Signup</Button>
+                        {/* <Button className="btn-color">Signup</Button> */}
+                        <button className="custome-btn">Signup</button>
                     </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

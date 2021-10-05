@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useTeachers from '../hooks/useTeachers';
 import Teacher from '../Teacher/Teacher';
 import './Teachers.css'
 const Teachers = () => {
-    const [teachers, setTeachers] =useState([]);
-
-
-    //call json file and set to the state.
-    useEffect(()=>{
-        fetch('./teachers.JSON')
-        .then(res=>res.json())
-        .then(data=> setTeachers(data))
-    },[])
+    const [teachers]  = useTeachers();
     return (
         <div className='teacher-container'>
 
