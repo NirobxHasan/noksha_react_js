@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, Col, ListGroup,Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Course.css'
+import {Slide,Flip,Fade} from 'react-reveal';
 const Course = (props) => {
 
     const [show, setShow] = useState(false);
@@ -14,13 +15,15 @@ const Course = (props) => {
         
         <Col className='my-3 d-flex justify-content-center ' >
            
-
-            <Card style={{ width: '25rem' , height: '32.5rem'}} className="course-card">
+           <Slide bottom>
+            <Card style={{ width: '25rem' , height: '29rem'}} className="course-card">
+            
             <Card.Img className="card-img" variant="top" src={thumbnail} />
+            
             <Card.Body >
                 <Card.Title className="fw-bold">{title}</Card.Title>
                 <Card.Text>
-                {description.slice(0,150)} ....
+                {description.slice(0,80)} ....
                 </Card.Text>
                 <div className='d-flex justify-content-between card-info'>
                         <p className='fw-bold'>Enroll {enroll} students</p>
@@ -61,6 +64,7 @@ const Course = (props) => {
                 
             </Card.Body>
             </Card>
+            </Slide>
         </Col>
     );
 };

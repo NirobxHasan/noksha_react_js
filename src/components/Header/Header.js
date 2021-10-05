@@ -13,6 +13,10 @@ import useCourses from '../hooks/useCourses';
 import { Link } from 'react-router-dom';
 import useTeachers from '../hooks/useTeachers';
 import Teacher from '../Teacher/Teacher';
+// import scroll animation 
+import {Zoom, Fade} from 'react-reveal';
+
+
 const Header = () => {
     const [teachers] =useTeachers();
     const [courses] = useCourses();
@@ -20,7 +24,7 @@ const Header = () => {
         <div>
            
           {/* Image slider */}
-            <Carousel >
+            <Carousel  >
                 <Carousel.Item  className="carosel-item">
                     <img
                     className="d-block w-100"
@@ -59,11 +63,12 @@ const Header = () => {
             </Carousel>
 
             <div>
-                <div className='mx-auto m-5 w-50 '>
+            <Zoom>
+                <div className='mx-auto m-5 w-50'>
                     <h2 className='fw-bold text-center'>Why An Scholercity Out Of The Ordinary</h2>
                     <p className='text-center'>You don't have to struggle alone, you've got our assistance and help.</p>
                 </div>
-
+            </Zoom>
                 <div className='m-4' >
                 <Container > 
                     <Row xs={1} md={2} className="g-4 d-flex justify-content-center">
@@ -92,12 +97,15 @@ const Header = () => {
                 </Container>
                 </div>
             </div>
-
+           
             {/* courses  */}
             <Container className='my-5 p-3' >
                 <h1 className='fw-bold'>Find The Right <br />
                     Online Course For You</h1>
-                    <p>You don't have to struggle alone, you've got our assistance and help.</p>
+                    <p><Zoom right cascade>
+                        You don't have to struggle alone, you've got our assistance and help.
+                        </Zoom>
+                        </p>
                    
 
                    
@@ -115,7 +123,11 @@ const Header = () => {
             <Container className=''>
                 <Row xs={1} sm={1} md={2} lg={2} >
                     <Col lg={4} sm={12} xs={12} className="p-4">
-                        <h2 className="text-secondary fw-bold teachers-text">Hello. Our courses has been present for over 5 years in the market. We make the most of all our students.</h2>
+                        <h2 className="text-secondary fw-bold teachers-text">
+                        <Fade left cascade>
+                            Hello. Our courses has been present for over 5 years in the market. We make the most of all our students.
+                        </Fade> 
+                        </h2>   
                     </Col>
                     <Col lg={8} className="p-3">
                     <div className="teacher-section ">

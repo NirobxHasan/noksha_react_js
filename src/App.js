@@ -16,7 +16,7 @@ import Courses from './components/Courses/Courses';
 import CouseDetails from './components/CourseDetails/CouseDetails';
 import NotFound from './components/NotFound/NotFound';
 import Teachers from './components/Teachers/Teachers';
-
+import "animate.css"
 function App() {
   return (
     <div className="App">

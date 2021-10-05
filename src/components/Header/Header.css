@@ -16,9 +16,11 @@
     border:0;
     
 }
+
 .card1{
     background-color: #F50057;
 }
+
 .card2{
     background-color: #00C3AD;
 }
@@ -31,6 +33,14 @@
 .teachers-text{
     text-align: end;
 }
+.card1:hover, .card2:hover, .card3:hover, .card4:hover{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: shakeY; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 7s; /* don't forget to set a duration! */
+}
+
 @media only screen and (max-width:992px){
     .carosel-item{
         height: 100%;

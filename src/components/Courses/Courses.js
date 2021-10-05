@@ -10,7 +10,7 @@ const Courses = () => {
         <div className='courses'>
               <Row xs={1} md={2} className="m-4">
                     {
-                        courses.map(course => <Course course={course} />)
+                        courses.map(course =><Course course={course} />)
                     }
                  
                 </Row>
