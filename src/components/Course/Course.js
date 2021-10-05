@@ -13,10 +13,10 @@ const Course = (props) => {
     const {index,title,thumbnail,enroll,description,price,instructor_name,instructor_img} = props.course;
     return (
         
-        <Col className='my-3 d-flex justify-content-center ' >
+        <Col className='my-3 d-flex justify-content-center px-5' >
            
            <Slide bottom>
-            <Card style={{ width: '25rem' , height: '29rem'}} className="course-card">
+            <Card style={{ width: '22rem' , height: '29.5rem'}} className="course-card">
             
             <Card.Img className="card-img" variant="top" src={thumbnail} />
             
