@@ -120,8 +120,8 @@ const Header = () => {
             
             </Container>
 
-            <Container className=''>
-                <Row xs={1} sm={1} md={2} lg={2} >
+            <Container >
+                <Row xs={1} sm={1} md={2} lg={2} className='d-flex align-items-center' >
                     <Col lg={4} sm={12} xs={12} className="p-4">
                         <h2 className="text-secondary fw-bold teachers-text">
                         <Fade left cascade>
